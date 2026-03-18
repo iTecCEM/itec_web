@@ -11,7 +11,6 @@
 }
 
 .WhiteButton:hover{
-    transition-duration: 0.1s;
-    transition-timing-function: ease-in;
-    transform: scale(1.05); 
+    background-color: #0072EC;
+    color: white;
 }

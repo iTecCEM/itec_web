@@ -1,5 +1,6 @@
 import logo from '../assets/logo_itec.png'
 import itec_week from '../assets/itec_week_landing.png'
+import vision from '../assets/vision.png'
 import './Landing.css'
 import BlueButton from '../components/BlueButton'
 import WhiteButton from '../components/WhiteButton'
@@ -18,6 +19,7 @@ function Landing(){
                 <WhiteButton text='Contactanos'></WhiteButton>
             </div>
 
+            <hr className="sectionDivider" />
             <div className="mainEventSection">
                 <img src={itec_week} alt='Texto hack'/>
                 <div className='buttonContainer'>
@@ -26,10 +28,37 @@ function Landing(){
                 </div>
             </div>
             
-            <div>
 
+            <div className="eventsGrid">
+                <div className="eventCard">
+                    <img src={vision} alt="Event 1" />
+                    <div className="eventCardButtons">
+                        <BlueButton text='Inscribirse' />
+                        <WhiteButton text='Regístrate' />
+                    </div>
+                </div>
+                <div className="eventCard">
+                    <img src={vision} alt="Event 2" />
+                    <div className="eventCardButtons">
+                        <BlueButton text='Inscribirse' />
+                        <WhiteButton text='Regístrate' />
+                    </div>
+                </div>
+                <div className="eventCard">
+                    <img src={vision} alt="Event 3" />
+                    <div className="eventCardButtons">
+                        <BlueButton text='Inscribirse' />
+                        <WhiteButton text='Regístrate' />
+                    </div>
+                </div>
+                <div className="eventCard">
+                    <img src={vision} alt="Event 4" />
+                    <div className="eventCardButtons">
+                        <BlueButton text='Inscribirse' />
+                        <WhiteButton text='Regístrate' />
+                    </div>
+                </div>
             </div>
-
 
         </div>
 

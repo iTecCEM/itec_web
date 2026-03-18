@@ -23,6 +23,13 @@
     padding-bottom: 40px;
 }
 
+.sectionDivider {
+  width: 100%;
+  background-color: white;
+  border-top: 0px solid white;
+  /* margin: 0; */
+}
+
 .mainEventSection{
   width: 100%;
   background-color: #000000;
@@ -36,3 +43,35 @@
   margin: 0 auto;
   padding-bottom: 30px;
 }
+
+.eventsGrid {
+  display: grid;
+  background-color: white;
+  margin-top: -20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.eventCard {
+  position: relative;
+}
+
+.eventCard img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.eventCardButtons {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
