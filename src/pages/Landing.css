@@ -20,4 +20,19 @@
     align-items: center;
     gap:10px;
     padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.mainEventSection{
+  width: 100%;
+  background-color: #000000;
+  padding: 25px 0;
+}
+
+.mainEventSection img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }

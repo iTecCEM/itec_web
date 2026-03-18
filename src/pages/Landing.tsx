@@ -1,8 +1,8 @@
 import logo from '../assets/logo_itec.png'
+import itec_week from '../assets/itec_week_landing.png'
 import './Landing.css'
 import BlueButton from '../components/BlueButton'
 import WhiteButton from '../components/WhiteButton'
-import MainEvent from '../components/MainEvent'
 
 function Landing(){
 
@@ -18,8 +18,19 @@ function Landing(){
                 <WhiteButton text='Contactanos'></WhiteButton>
             </div>
 
+            <div className="mainEventSection">
+                <img src={itec_week} alt='Texto hack'/>
+                <div className='buttonContainer'>
+                    <BlueButton text='Aprende más'></BlueButton>
+                    <WhiteButton text='Registrate'></WhiteButton>
+                </div>
+            </div>
+            
+            <div>
 
-            <MainEvent></MainEvent>
+            </div>
+
+
         </div>
 
         
