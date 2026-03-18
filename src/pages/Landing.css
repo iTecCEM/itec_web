@@ -1,0 +1,12 @@
+.logo {
+  width: 400px;
+  height: 400px;
+}
+
+.landingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
