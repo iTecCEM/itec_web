@@ -28,15 +28,18 @@ body {
 
 .title {
   font-family: 'Inter', sans-serif;
-  font-weight: 15000;
-  font-size: 3rem;
+  font-weight: 550;
+  font-size: 4rem;
+  margin: 0;
 }
 
 .description {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: 1rem;
   color: #888;
+  margin: 0;
+  text-align: center;
 }
 
 .btn-text {

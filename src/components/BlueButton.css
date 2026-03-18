@@ -1,0 +1,17 @@
+.BlueButton{
+    border-radius: 1000px;
+    background-color: #0072EC;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 12px 32px;
+    border: none;
+    cursor: pointer;
+}
+
+.BlueButton:hover{
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transform: scale(1.05); 
+}
