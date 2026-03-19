@@ -1,39 +1,20 @@
-import vision from '../../assets/vision.png'
+
+import Card from './EventsGridCard.tsx'
+import widget1Imagen from '../../assets/foundationsmodel.png'
+import widget2Imagen from '../../assets/vision.png'
+
 import './LandingPageStyle.css'
-import BlueButton from '../GlobalComponents/BlueButton'
-import WhiteButton from '../GlobalComponents/WhiteButton'
 
 function EventsGrid(){
+
+
+
     return(
         <div className="eventsGrid">
-            <div className="eventCard">
-                <img src={vision} alt="Event 1" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
-            <div className="eventCard">
-                <img src={vision} alt="Event 2" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
-            <div className="eventCard">
-                <img src={vision} alt="Event 3" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
-            <div className="eventCard">
-                <img src={vision} alt="Event 4" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
+            <Card id='foundations-model' titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
+            <Card id='vision-pro' titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
+            <Card id='vision-pro-2' titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
+            <Card id='foundations-model-2' titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
         </div>
     )
 }

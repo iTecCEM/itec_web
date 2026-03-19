@@ -12,7 +12,6 @@ function Landing(){
             <FirstLanding />
             <hr className="Divider" />
             <MainEvent />
-            <hr className="Divider" />
             <EventsGrid />
         </div>
     )

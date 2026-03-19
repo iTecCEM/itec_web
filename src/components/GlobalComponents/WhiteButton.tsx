@@ -1,9 +1,9 @@
 import './WhiteButton.css'
 
-function BlueButton({ text }: { text: string }) {
+function WhiteButton({ text, onClick }: { text: string; onClick?: () => void }) {
   return (
-    <button className="WhiteButton">{text}</button>
+    <button className="WhiteButton" onClick={onClick}>{text}</button>
   );
 }
 
-export default BlueButton;
+export default WhiteButton;

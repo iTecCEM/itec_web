@@ -42,6 +42,14 @@ body {
   text-align: center;
 }
 
+.descriptionWidget {
+  font-family: 'Inter', sans-serif;
+  font-weight: 350;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
 .btn-text {
   font-family: 'Inter', sans-serif;
   font-weight: 600;

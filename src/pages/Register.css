@@ -1,0 +1,113 @@
+
+
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #333;
+}
+
+hr {
+  width: 80%;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.formSection h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.inputLabel {
+  width: 100px;
+  text-align: right;
+  padding-right: 12px;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.textInput {
+  width: 220px;
+  padding: 6px 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.9rem;
+  color: black;
+}
+
+select.textInput {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+}
+
+.radioGroup {
+  width: 220px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.textareaRow {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  width: 340px;
+}
+
+.textareaLabel {
+  font-size: 0.85rem;
+  color: black;
+  margin-bottom: 6px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 8px;
+  background: white;
+  resize: vertical;
+  color: black;
+}
+
+.buttonArea {
+  padding: 10px;
+}

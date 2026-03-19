@@ -1,7 +1,7 @@
 import './BlueButton.css'
-function BlueButton({ text }: { text: string }) {
+function BlueButton({ text, onClick }: { text: string; onClick?: () => void }) {
   return (
-    <button className="BlueButton">{text}</button>
+    <button className="BlueButton" onClick={onClick}>{text}</button>
   );
 }
 
