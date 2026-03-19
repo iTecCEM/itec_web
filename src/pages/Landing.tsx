@@ -1,6 +1,6 @@
 import './Landing.css'
-import FirstLanding from '../components/FirstLanding'
-import MainEvent from '../components/MainEvent'
+import FirstLanding from '../components/LandingPageComponents/FirstLanding'
+import MainEvent from '../components/LandingPageComponents/MainEvent'
 
 function Landing(){
 
