@@ -120,7 +120,7 @@ function EventInfo() {
 
             <p className="eventDeadline">{evento.deadline}</p>
 
-            <button className="eventRequestBtn" onClick={() => navigate('/')}>
+            <button className="eventRequestBtn" onClick={() => navigate('/registro')}>
               Registrate
             </button>
 
