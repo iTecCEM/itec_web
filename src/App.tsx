@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/community" element={<Community />} />
         <Route path="/evento/:id" element={<EventInfo />} />
-        <Route path="/registro" element={<Registro />} /> 
+        <Route path="/registro/:id" element={<Registro />} />
       </Routes>
     </BrowserRouter>
   );

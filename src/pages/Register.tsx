@@ -1,14 +1,56 @@
+import { useParams } from 'react-router-dom';
 import './Register.css';
 
+interface EventData {
+    titulo: string;
+    horario_1: string;
+    horario_2: string;
+    deadline: string;
+}
+
+const eventData: Record<string, EventData> = {
+    'foundations-model': {
+        titulo: 'Foundations Model',
+        horario_1: '11:00 - 13:00',
+        horario_2: '15:00 - 16:00',
+        deadline: '12 de Abril',
+    },
+    'vision-pro': {
+        titulo: 'Vision Pro Experience',
+        horario_1: '11:00 - 13:00',
+        horario_2: '15:00 - 16:00',
+        deadline: '19 de Abril',
+    },
+    'vision-pro-2': {
+        titulo: 'Vision Pro - Sesión 2',
+        horario_1: '11:00 - 13:00',
+        horario_2: '15:00 - 16:00',
+        deadline: '26 de Abril',
+    },
+    'foundations-model-2': {
+        titulo: 'Foundations Model - Sesión 2',
+        horario_1: '11:00 - 13:00',
+        horario_2: '15:00 - 16:00',
+        deadline: '3 de Mayo',
+    },
+};
+
 export default function Registro() {
+    const { id } = useParams<{ id: string }>();
+    const evento = id ? eventData[id] : null;
+
     return (
         <div className='registerContainer'>
-            <h1>Vision Pro Workshop submission</h1>
-            <p>Registrate con tu informacion para el Vision Pro Workshop antes del 25 de febrero</p>
+            <h1>{evento ? evento.titulo : 'Workshop'} — Registro</h1>
+            <p>
+                {evento
+                    ? `Regístrate antes del ${evento.deadline}`
+                    : 'Regístrate con tu información'}
+            </p>
             <hr />
 
             <div className="formSection">
-                <h2>Tu informacion</h2>
+                <h2>Tu información</h2>
 
                 <div className="inputRow">
                     <label className="inputLabel">Nombre</label>
@@ -44,10 +86,13 @@ export default function Registro() {
                     <label className="inputLabel">Horario</label>
                     <select name='horario' className="textInput" required>
                         <option value="">Selecciona un horario</option>
-                        <option value="11:00-13:00">11:00 - 13:00</option>
-                        <option value="15:00-16:00">15:00 - 16:00</option>
+                        <option value={evento?.horario_1 ?? '11:00 - 13:00'}>
+                            {evento?.horario_1 ?? '11:00 - 13:00'}
+                        </option>
+                        <option value={evento?.horario_2 ?? '15:00 - 16:00'}>
+                            {evento?.horario_2 ?? '15:00 - 16:00'}
+                        </option>
                     </select>
-                   
                 </div>
 
                 <div className="textareaRow">
