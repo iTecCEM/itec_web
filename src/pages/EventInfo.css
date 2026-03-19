@@ -1,0 +1,172 @@
+.eventPage {
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 180px 100px;
+}
+
+.eventCard {
+  width: 100%;
+  max-width: 980px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 48px 56px;
+  margin-top: 100px;
+}
+
+.eventLayout {
+  display: flex;
+  gap: 48px;
+}
+
+.eventMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.eventMain img{
+    width: 50px;
+    height: 50px;
+}
+
+.eventIcono {
+  margin-bottom: 24px;
+  height: auto;
+  max-height: 40px;
+  width: auto;
+}
+
+.eventTitulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.eventBody {
+  font-size: 0.975rem;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 16px;
+}
+
+.eventDeadline {
+  font-size: 0.975rem;
+  color: black;
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.eventRequestBtn {
+  display: inline-block;
+  padding: 10px 32px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2997ff;
+  background: transparent;
+  border: 1.5px solid #2997ff;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.eventRequestBtn:hover {
+  background-color: #2997ff;
+  color: #fff;
+}
+
+.eventDateBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid black;
+}
+
+.eventDateIcon {
+  font-size: 1.2rem;
+}
+
+.eventDateMain {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.eventDateSub {
+  font-size: 0.85rem;
+  color: #a1a1a6;
+  margin: 2px 0 0;
+}
+
+/* Sidebar */
+.eventSidebar {
+  width: 240px;
+  flex-shrink: 0;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.eventSidebar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 120px;
+  width: 1px;
+  background-color: #d2d2d7;
+}
+
+.eventMetaItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.eventMetaIcon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.eventMetaLabel {
+  font-size: 0.9rem;
+  color: black;
+  margin: 0;
+  font-weight: 500;
+}
+
+.eventMetaSub {
+  font-size: 0.8rem;
+  color: bla;
+  margin: 2px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .eventCard {
+    padding: 32px 24px;
+  }
+
+  .eventLayout {
+    flex-direction: column;
+  }
+
+  .eventSidebar {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 28px;
+    border-left: none;
+    border-top: 1px solid #2a2a2c;
+    position: relative;
+  }
+}

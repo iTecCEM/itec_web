@@ -11,9 +11,10 @@ function EventsGrid(){
 
     return(
         <div className="eventsGrid">
-            <Card titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
-            <Card titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
-
+            <Card id='foundations-model' titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
+            <Card id='vision-pro' titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
+            <Card id='vision-pro-2' titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
+            <Card id='foundations-model-2' titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
         </div>
     )
 }
