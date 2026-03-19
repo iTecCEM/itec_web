@@ -1,71 +1,18 @@
-import logo from '../assets/logo_itec.png'
-import itec_week from '../assets/itec_week_landing.png'
-import vision from '../assets/vision.png'
 import './Landing.css'
-import BlueButton from '../components/BlueButton'
-import WhiteButton from '../components/WhiteButton'
+import FirstLanding from '../components/FirstLanding'
+import MainEvent from '../components/MainEvent'
 
 function Landing(){
 
     return(
         <div className='landingContainer'>
-            <img src={logo} alt="iTec Logo" className='logo' />
-            <h1 className="title">iTec</h1>
-            <p className="description">Student community based on Tecnologico de Monterrey CEM focused on <br/>
-            Apple’s latest Software and Hardware innovations.<br/>Driven by innovation and creativity, pushing the boundries of the technology </p>
-
-            <div className='buttonContainer'>
-                <BlueButton text='Aprende más'></BlueButton>
-                <WhiteButton text='Contactanos'></WhiteButton>
-            </div>
-
-            <hr className="sectionDivider" />
-            <div className="mainEventSection">
-                <img src={itec_week} alt='Texto hack'/>
-                <div className='buttonContainer'>
-                    <BlueButton text='Aprende más'></BlueButton>
-                    <WhiteButton text='Registrate'></WhiteButton>
-                </div>
-            </div>
-            
-
-            <div className="eventsGrid">
-                <div className="eventCard">
-                    <img src={vision} alt="Event 1" />
-                    <div className="eventCardButtons">
-                        <BlueButton text='Inscribirse' />
-                        <WhiteButton text='Regístrate' />
-                    </div>
-                </div>
-                <div className="eventCard">
-                    <img src={vision} alt="Event 2" />
-                    <div className="eventCardButtons">
-                        <BlueButton text='Inscribirse' />
-                        <WhiteButton text='Regístrate' />
-                    </div>
-                </div>
-                <div className="eventCard">
-                    <img src={vision} alt="Event 3" />
-                    <div className="eventCardButtons">
-                        <BlueButton text='Inscribirse' />
-                        <WhiteButton text='Regístrate' />
-                    </div>
-                </div>
-                <div className="eventCard">
-                    <img src={vision} alt="Event 4" />
-                    <div className="eventCardButtons">
-                        <BlueButton text='Inscribirse' />
-                        <WhiteButton text='Regístrate' />
-                    </div>
-                </div>
-            </div>
+            <FirstLanding />
+            <hr className="Divider" />
+            <MainEvent />
+            <hr className="Divider" />
 
         </div>
-
-        
-    )   
-
-
+    )
 }
 
 export default Landing;

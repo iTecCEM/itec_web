@@ -1,0 +1,14 @@
+.firstLanding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px 0 40px;
+  gap: 12px;
+}
+
+.firstLanding .logo {
+  width: 150px;
+  height: 150px;
+}
