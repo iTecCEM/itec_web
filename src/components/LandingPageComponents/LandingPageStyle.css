@@ -28,3 +28,36 @@
   width: 400px;
   height: 400px;
 }
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.eventCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.eventCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.eventCardButtons {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1;
+}
