@@ -1,0 +1,33 @@
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0 40px;
+    gap: 0px;
+}
+
+
+.contentContainer h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+}
+
+.contentContainer img{
+    width: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.contentContainer .buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    padding-top: 12px;
+    padding-bottom: 0;
+    transform: scale(0.75);
+}
+

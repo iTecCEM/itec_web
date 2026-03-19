@@ -1,41 +1,18 @@
-import vision from '../../assets/vision.png'
-import swiftui from '../../assets/swiftui.png'
+
+import Card from './EventsGridCard.tsx'
 
 import './LandingPageStyle.css'
-import BlueButton from '../GlobalComponents/BlueButton'
-import WhiteButton from '../GlobalComponents/WhiteButton'
 
 function EventsGrid(){
+    const widget1Imagen = 'src/assets/foundationsmodel.png'
+    const widget2Imagen = 'src/assets/vision.png'
+
+
     return(
         <div className="eventsGrid">
-            <div className="eventCard">
-                <img src={vision} alt="Event 1" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
-            <div className="eventCard">
-                <img src={swiftui} alt="Event 2" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
-            <div className="eventCard">
-                <img src={vision} alt="Event 3" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
-            <div className="eventCard">
-                <img src={vision} alt="Event 4" />
-                <div className="eventCardButtons">
-                    <BlueButton text='Inscribirse' />
-                    <WhiteButton text='Conocer más' />
-                </div>
-            </div>
+            <Card titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
+            <Card titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
+
         </div>
     )
 }

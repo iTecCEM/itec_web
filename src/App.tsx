@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Community from './pages/Community';
-import Registro from './pages/Registro.js';
 // import NotFound from './pages/NotFound';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/registro" element={<Registro />} />
+        {/* <Route path="/registro" element={<Registro />} /> */}
       </Routes>
     </BrowserRouter>
   );
