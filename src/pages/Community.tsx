@@ -1,9 +1,8 @@
-import '../components/Navbar.tsx'
-import Navbar from "../components/Navbar";
+import Navbar from "../components/GlobalComponents/Navbar.tsx";
 
 function Community() {
   return (
-    <Navbar></Navbar>
+    <Navbar/>
   );
 }
 

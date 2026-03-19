@@ -1,7 +1,7 @@
 import logo_itec_week from '../../assets/itec_week.png'
 import './LandingPageStyle.css'
-import BlueButton from '../BlueButton'
-import WhiteButton from '../WhiteButton'
+import BlueButton from '../GlobalComponents/BlueButton'
+import WhiteButton from '../GlobalComponents/WhiteButton'
 
 function main_event(){
     return(

@@ -1,7 +1,7 @@
 import logo from '../../assets/logo_itec.png'
 import './LandingPageStyle.css'
-import BlueButton from '../BlueButton'
-import WhiteButton from '../WhiteButton'
+import BlueButton from '../GlobalComponents/BlueButton'
+import WhiteButton from '../GlobalComponents/WhiteButton'
 
 function FirstLanding(){
     return(
