@@ -3,6 +3,7 @@ import './Register.css';
 import { supabase } from '../lib/supabaseClient';
 import { useState } from 'react';
 import BlueButton from '../components/GlobalComponents/BlueButton';
+import WhiteButton from '../components/GlobalComponents/WhiteButton';
 
 
 interface EventData {
@@ -211,6 +212,7 @@ export default function Registro() {
                     <button type="submit" className="BlueButton" disabled={loading}>
                         {loading ? 'Enviando...' : 'Enviar'}
                     </button>
+                    <WhiteButton text='Volver'/>
                 </div>
             </form>
         </div>
