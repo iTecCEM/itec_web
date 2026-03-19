@@ -4,24 +4,17 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <header className = "navbar-container">
-                <div className = "navbar-logo">
-                    <img src = {logo} alt= "iTec logo"/>
-                </div>
-                <nav>
+                <nav className = 'navbar-content'>
+                    <a href="#" className="navbar-logo">
+                        <img src = {logo} alt= "iTec logo"/>
+                    </a>
                     <ul className = "navbar-links">
-                        {[
-                            { label: 'Home' },
-                            { label: 'Projects' },
-                            { label: 'Events'},
-                            { label: 'About us'},
-                        ].map(({ label }) => (
-                            <li key={label}>
-                                <a href='#'>{label}</a>
-                            </li>
-                        ))}
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </nav>
-                <div className="navbar-spacer"></div>
         </header>
     );
 };
