@@ -1,4 +1,6 @@
 import vision from '../../assets/vision.png'
+import swiftui from '../../assets/swiftui.png'
+
 import './LandingPageStyle.css'
 import BlueButton from '../GlobalComponents/BlueButton'
 import WhiteButton from '../GlobalComponents/WhiteButton'
@@ -14,7 +16,7 @@ function EventsGrid(){
                 </div>
             </div>
             <div className="eventCard">
-                <img src={vision} alt="Event 2" />
+                <img src={swiftui} alt="Event 2" />
                 <div className="eventCardButtons">
                     <BlueButton text='Inscribirse' />
                     <WhiteButton text='Conocer más' />
