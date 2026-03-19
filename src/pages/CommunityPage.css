@@ -1,0 +1,157 @@
+.historySection {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 88px 0 36px;
+}
+
+.historyContent {
+	width: min(1080px, 92%);
+	margin-left: clamp(18px, 5vw, 68px);
+	display: grid;
+	grid-template-columns: minmax(320px, 1fr) 320px;
+	align-items: center;
+	justify-content: start;
+	gap: clamp(24px, 4vw, 56px);
+}
+
+.historyText {
+	max-width: 460px;
+	justify-self: start;
+	text-align: left;
+}
+
+.historyText h1 {
+	margin: 0 0 18px;
+	font-size: 50px;
+	line-height: 1;
+    font-weight: 700;
+    color: black;
+    letter-spacing: -0.02em;
+}
+
+.historyText p {
+	margin: 0;
+	line-height: 1.55;
+	font-size: 1.05rem;
+	color: #595959;
+}
+
+.historyCarouselFrame {
+	position: relative;
+	width: 420px;
+	height: 460px;
+	justify-self: center;
+}
+
+.historyCarousel {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+	border: 2px solid #d9d9d9;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	background: #f7f7f7;
+}
+
+.historyCarouselTrack {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+	will-change: transform;
+}
+
+.historyCarouselSlide {
+	min-width: 100%;
+	height: 100%;
+}
+
+.historyCarouselImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.historyCarouselButton {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 34px;
+	height: 34px;
+	border: none;
+	border-radius: 999px;
+	cursor: pointer;
+	background: #d1d5db;
+	color: #4b5563;
+	font-size: 24px;
+	line-height: 1;
+	z-index: 2;
+}
+
+.historyCarouselButton.previous {
+	left: -48px;
+}
+
+.historyCarouselButton.next {
+	right: -48px;
+}
+
+@media (max-width: 880px) {
+	.historySection {
+		padding: 68px 0 24px;
+	}
+
+	.historyContent {
+		grid-template-columns: 1fr;
+		margin-left: 0;
+		justify-items: center;
+		text-align: left;
+	}
+
+	.historyText {
+		max-width: 680px;
+		justify-self: start;
+	}
+
+	.historyCarouselFrame {
+		width: min(100%, 330px);
+		height: 470px;
+	}
+
+	.historyCarouselButton.previous {
+		left: -20px;
+	}
+
+	.historyCarouselButton.next {
+		right: -20px;
+	}
+}
+
+.memojiSection {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 32px 0 48px;
+}
+
+.memojiRectangle {
+	width: 100%;
+	height: min(900px, 56.25vw);
+	background: #ffffff;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 28px 24px 24px;
+	box-sizing: border-box;
+}
+
+.memojiRectangle h1 {
+	margin: 0;
+	width: 100%;
+	color: #000000;
+	font-size: 50px;
+	text-align: center;
+}
