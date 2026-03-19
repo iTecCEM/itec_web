@@ -1,4 +1,4 @@
-import './GlobalComponents.css'
+import './WhiteButton.css'
 
 function BlueButton({ text }: { text: string }) {
   return (

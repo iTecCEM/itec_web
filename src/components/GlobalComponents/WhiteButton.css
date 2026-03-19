@@ -1,0 +1,16 @@
+.WhiteButton{
+    border-radius: 1000px;
+    background-color: white;
+    color: #0072EC;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding: 12px 32px;
+    border: 2px solid #0072EC;
+    cursor: pointer;
+}
+
+.WhiteButton:hover{
+    background-color: #0072EC;
+    color: white;
+}

@@ -1,5 +1,5 @@
 import logo from '../../assets/logo_itec.png'
-import './GlobalComponents.css'
+import './NavBar.css'
 
 const Navbar = () => {
     return (

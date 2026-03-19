@@ -1,4 +1,4 @@
-import './GlobalComponents.css'
+import './BlueButton.css'
 function BlueButton({ text }: { text: string }) {
   return (
     <button className="BlueButton">{text}</button>
