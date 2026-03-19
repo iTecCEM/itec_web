@@ -107,3 +107,7 @@ textarea {
   resize: vertical;
   color: black;
 }
+
+.buttonArea {
+  padding: 10px;
+}

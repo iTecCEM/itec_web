@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import './Register.css';
+import BlueButton from '../components/GlobalComponents/BlueButton';
 
 interface EventData {
     titulo: string;
@@ -101,6 +102,10 @@ export default function Registro() {
                     </label>
                     <textarea required />
                 </div>
+            </div>
+
+            <div className='buttonArea'>
+                <BlueButton text='Enviar'/>
             </div>
         </div>
     );
