@@ -1,11 +1,12 @@
 
 import Card from './EventsGridCard.tsx'
+import widget1Imagen from '../../assets/foundationsmodel.png'
+import widget2Imagen from '../../assets/vision.png'
 
 import './LandingPageStyle.css'
 
 function EventsGrid(){
-    const widget1Imagen = 'src/assets/foundationsmodel.png'
-    const widget2Imagen = 'src/assets/vision.png'
+
 
 
     return(
