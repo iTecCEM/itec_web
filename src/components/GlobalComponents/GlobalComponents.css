@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 40px;
     padding: 0 50px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .navbar-logo img{
-    height: 25px;
+    height: 20px;
     width: auto;
 }
 
@@ -63,6 +63,12 @@
     font-weight: 500;
     opacity: 0.7;
     justify-content: center;
+    font-size: 12px;
+}
+
+.navbar-links a:hover{
+    color: black;
+    transition: ease-in 0.1s;
 }
 
 .WhiteButton{
