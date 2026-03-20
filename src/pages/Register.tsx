@@ -4,6 +4,7 @@ import { supabase } from '../lib/supabaseClient';
 import { useState } from 'react';
 import BlueButton from '../components/GlobalComponents/BlueButton';
 import WhiteButton from '../components/GlobalComponents/WhiteButton';
+import Navbar from '../components/GlobalComponents/Navbar';
 
 
 interface EventData {
@@ -113,6 +114,7 @@ export default function Registro() {
 
     return (
         <div className='registerContainer'>
+            <Navbar></Navbar>
             <h1>{evento ? evento.titulo : 'Workshop'} — Registro</h1>
             <p>
                 {evento
