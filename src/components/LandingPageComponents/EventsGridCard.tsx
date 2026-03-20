@@ -12,7 +12,7 @@ function EventsGridCard({ id, titulo, descripcion, color, bgColor, imagen }: { i
     return(
             <div className='contentContainer' style={{ backgroundColor: bgColor, color: color }}>
                 <h1 className='title'>{titulo}</h1>
-                <p className="descriptionWidget">{descripcion}</p>
+                <p style={{color: color}}>{descripcion}</p>
                 <div className='buttonContainer'>
                     <BlueButton text='Aprende más' onClick={() => navigate(`/evento/${id}`)}></BlueButton>
                     <WhiteButton text='Registrate' onClick={() => navigate(`/evento/${id}`)}></WhiteButton>
