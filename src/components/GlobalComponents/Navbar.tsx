@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logo_itec.png'
 import './NavBar.css'
 
@@ -21,24 +22,16 @@ const navItems: NavItem[] = [
             {
                 section: 'Explorar eventos',
                 links: [
-                    { label: 'Swift for Impact Hack', href: '#' },
-                    { label: 'Swift for Impact Hack', href: '#' },
+                    { label: 'Foundations Model', href: '/eventos/foundations-model' },
+                    { label: 'Vision Pro', href: '/eventos/vision-pro' },
                 ]
             }
         ]
     },
     {
         label: 'Comunidad',
-        href: '#',
-        menu: [
-            {
-                section: 'Explorar eventos',
-                links: [
-                    { label: 'Swift for Impact Hack', href: '#' },
-                    { label: 'Swift for Impact Hack', href: '#' },
-                ]
-            }
-        ]
+        href: '/community',
+        menu: null
     },
 ]
 
@@ -71,27 +64,27 @@ const Navbar = () => {
 
     return (
         <>
-            {}
+            { }
             <div className={`dropdown-backdrop ${isOpen ? 'open' : ''}`} />
 
             <header className={`navbar-container ${isOpen ? 'open' : ''}`} onMouseLeave={handleLeave}>
                 <nav className='navbar-content'>
-                    <a href="#" className="navbar-logo">
+                    <Link to="/" className="navbar-logo">
                         <img src={logo} alt="iTec logo" />
-                    </a>
+                    </Link>
                     <ul className="navbar-links">
                         {navItems.map(item => (
                             <li
                                 key={item.label}
                                 className={activeItem === item.label ? 'active' : ''}
                                 onMouseEnter={() => handleEnter(item.label)}>
-                                <a href={item.href}>{item.label}</a>
+                                <Link to={item.href}>{item.label}</Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
 
-                {}
+                { }
                 <div className={`dropdown-container ${isOpen ? 'open' : ''}`}>
                     <div className="dropdown-inner">
                         <div className="dropdown-content">
@@ -101,7 +94,7 @@ const Navbar = () => {
                                     <ul className="dropdown-links">
                                         {section.links.map((link, linkIdx) => (
                                             <li key={linkIdx}>
-                                                <a href={link.href}>{link.label}</a>
+                                                <Link to={link.href}>{link.label}</Link>
                                             </li>
                                         ))}
                                     </ul>
