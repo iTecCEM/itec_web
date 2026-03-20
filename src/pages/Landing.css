@@ -67,3 +67,12 @@
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+  .eventCardButtons {
+    bottom: 16px;
+  }
+}
+

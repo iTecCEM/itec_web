@@ -33,3 +33,13 @@
     width: 30px;
     height: 30px;
 }
+
+@media (max-width: 480px) {
+  .footerContainer {
+    flex-flow: column;
+    height: auto;
+    padding: 16px;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+}
