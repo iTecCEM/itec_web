@@ -46,6 +46,10 @@ hr {
   margin-bottom: 12px;
 }
 
+.horarioRow {
+  padding-top: 30px;
+}
+
 .inputLabel {
   width: 100px;
   text-align: right;
@@ -75,13 +79,30 @@ select.textInput {
 
 .radioGroup {
   width: 220px;
+  box-sizing: content-box;
+  padding: 6px 10px;
   border: 1px solid #999;
   border-radius: 6px;
-  padding: 10px 14px;
   background: white;
   display: flex;
   flex-direction: column;
+  gap: 6px;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
   gap: 8px;
+  font-size: 0.9rem;
+  color: black;
+  cursor: pointer;
+}
+
+.radioOption input[type="radio"] {
+  width: 10px;
+  height: 10px;
+  accent-color: #333;
+  margin: 0;
 }
 
 .textareaRow {
@@ -96,7 +117,7 @@ select.textInput {
   width: 250px;
   margin-left: -150px;
   flex-shrink: 0;
-  text-align: left;
+  text-align: justify;
   padding-right: 12px;
   font-size: 0.85rem;
   color: black;
@@ -116,7 +137,8 @@ textarea {
 }
 
 .buttonArea {
-  padding: 10px;
-  flex-direction: row;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
   gap: 10px;
 }

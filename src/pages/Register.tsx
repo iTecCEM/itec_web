@@ -178,23 +178,31 @@ export default function Registro() {
                     />
                 </div>
 
-                <div className="inputRow">
+                <div className="inputRow horarioRow">
                     <label className="inputLabel">Horario</label>
-                    <select
-                        name="selectedSchedule"
-                        className="textInput"
-                        required
-                        value={form.selectedSchedule}
-                        onChange={handleChange}
-                    >
-                        <option value="">Selecciona un horario</option>
-                        <option value={evento?.horario_1 ?? '11:00 - 13:00'}>
+                    <div className="radioGroup">
+                        <label className="radioOption">
+                            <input
+                                type="radio"
+                                name="selectedSchedule"
+                                value={evento?.horario_1 ?? '11:00 - 13:00'}
+                                required
+                                checked={form.selectedSchedule === (evento?.horario_1 ?? '11:00 - 13:00')}
+                                onChange={handleChange}
+                            />
                             {evento?.horario_1 ?? '11:00 - 13:00'}
-                        </option>
-                        <option value={evento?.horario_2 ?? '15:00 - 16:00'}>
+                        </label>
+                        <label className="radioOption">
+                            <input
+                                type="radio"
+                                name="selectedSchedule"
+                                value={evento?.horario_2 ?? '15:00 - 16:00'}
+                                checked={form.selectedSchedule === (evento?.horario_2 ?? '15:00 - 16:00')}
+                                onChange={handleChange}
+                            />
                             {evento?.horario_2 ?? '15:00 - 16:00'}
-                        </option>
-                    </select>
+                        </label>
+                    </div>
                 </div>
 
                 <div className="textareaRow">
