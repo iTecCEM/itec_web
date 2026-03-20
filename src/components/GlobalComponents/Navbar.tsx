@@ -16,6 +16,11 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     {
+        label: 'Inicio',
+        href: '/',
+        menu: null
+    },
+    {
         label: 'Eventos',
         href: '#',
         menu: [
@@ -34,6 +39,7 @@ const navItems: NavItem[] = [
         menu: null
     },
 ]
+
 
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState<string | null>(null)
