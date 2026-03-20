@@ -1,9 +1,2 @@
-# Itec Web
+# iTec web
 
-## .env
-'''shell
-db_password="iTec_acces16&3"
-
-VITE_SUPABASE_URL=https://gdvbcgniyxmyibuvuwra.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkdmJjZ25peXhteWlidXZ1d3JhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5MzAxMTAsImV4cCI6MjA4OTUwNjExMH0.EXdFgMgurGGArrknvzt0trYHhFeb1nECe1CjC1_e2Jo
-'''
