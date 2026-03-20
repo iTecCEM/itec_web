@@ -35,6 +35,7 @@ const navItems: NavItem[] = [
     },
 ]
 
+
 const Navbar = () => {
     const [activeItem, setActiveItem] = useState<string | null>(null)
     const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
