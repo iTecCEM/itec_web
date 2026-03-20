@@ -3,6 +3,7 @@ import FirstLanding from '../components/LandingPageComponents/FirstLanding'
 import MainEvent from '../components/LandingPageComponents/MainEvent'
 import EventsGrid from '../components/LandingPageComponents/EventsGrid'
 import NavBar from '../components/GlobalComponents/Navbar.tsx'
+import Footer from '../components/GlobalComponents/Footer.tsx'
 
 function Landing(){
 
@@ -13,6 +14,7 @@ function Landing(){
             <hr className="Divider" />
             <MainEvent />
             <EventsGrid />
+            <Footer />
         </div>
     )
 }
