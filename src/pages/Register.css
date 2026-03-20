@@ -11,7 +11,7 @@
 
 h1 {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -87,18 +87,24 @@ select.textInput {
 .textareaRow {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   margin-top: 16px;
-  width: 340px;
+  padding-top: 20px;
 }
 
 .textareaLabel {
+  width: 250px;
+  margin-left: -150px;
+  flex-shrink: 0;
+  text-align: left;
+  padding-right: 12px;
   font-size: 0.85rem;
   color: black;
-  margin-bottom: 6px;
+  padding-top: 6px;
 }
 
 textarea {
-  width: 100%;
+  width: 220px;
   height: 100px;
   border: 1px solid #999;
   border-radius: 6px;
@@ -106,8 +112,11 @@ textarea {
   background: white;
   resize: vertical;
   color: black;
+  font-size: 0.9rem;
 }
 
 .buttonArea {
   padding: 10px;
+  flex-direction: row;
+  gap: 10px;
 }

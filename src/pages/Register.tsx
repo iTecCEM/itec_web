@@ -115,7 +115,7 @@ export default function Registro() {
     return (
         <div className='registerContainer'>
             <Navbar></Navbar>
-            <h1>{evento ? evento.titulo : 'Workshop'} — Registro</h1>
+            <h1>{evento ? evento.titulo : 'Workshop'} Registro</h1>
             <p>
                 {evento
                     ? `Regístrate antes del ${evento.deadline}`
