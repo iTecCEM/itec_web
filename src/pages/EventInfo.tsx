@@ -5,6 +5,7 @@ import foundationsImg from '../assets/foundationsmodel.png';
 import visionImg from '../assets/vision.png';
 
 import NavBar from '../components/GlobalComponents/Navbar.tsx'
+import Footer from '../components/GlobalComponents/Footer.tsx';
 
 
 interface EventData {
@@ -165,6 +166,7 @@ function EventInfo() {
           </aside>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
