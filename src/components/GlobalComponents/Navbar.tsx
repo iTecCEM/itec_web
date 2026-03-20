@@ -16,6 +16,11 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     {
+        label: 'Inicio',
+        href: '/',
+        menu: null
+    },
+    {
         label: 'Eventos',
         href: '#',
         menu: [
