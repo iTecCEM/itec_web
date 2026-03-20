@@ -22,8 +22,8 @@ const navItems: NavItem[] = [
             {
                 section: 'Explorar eventos',
                 links: [
-                    { label: 'Foundations Model', href: '/eventos/foundations-model' },
-                    { label: 'Vision Pro', href: '/eventos/vision-pro' },
+                    { label: 'Foundations Model', href: '/evento/foundations-model' },
+                    { label: 'Vision Pro', href: '/evento/vision-pro' },
                 ]
             }
         ]
