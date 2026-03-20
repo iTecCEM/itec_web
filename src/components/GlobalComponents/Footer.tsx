@@ -1,5 +1,5 @@
 import "./Footer.css";
-import instagramSVG from '../../assets/instagram.svg';
+import instagramSVG from '../../assets/Instagram.svg';
 import emailSVG from '../../assets/email.svg';
 
 function Footer(){
