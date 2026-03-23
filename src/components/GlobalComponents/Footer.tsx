@@ -5,7 +5,7 @@ import emailSVG from '../../assets/email.svg';
 function Footer(){
     return (
         <>
-            <div className="footerLine"></div>
+            {/* <div className="footerLine"></div> */}
             <footer className="footerContainer">
                 <p>Copyright © 2026  iTec. Todos los derechos reservados</p>
                 <div className="socialsContainer">

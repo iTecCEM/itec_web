@@ -1,7 +1,7 @@
 .footerLine {
     height: 2px;
     width: 95%;
-    background: #CFCFCF;
+    background-color: white;
 }
 
 .footerContainer {
@@ -12,11 +12,12 @@
     justify-content: space-around;
     align-items: center;
     padding: 0 50px;
+    background-color: white;
 }
 
 .footerContainer p {
-    color: #929292;
-    font-family: "SF Pro", serif;
+    color: black;
+    font-family: "Inter", serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -29,9 +30,8 @@
     gap: 26px;
 }
 
-.socialsContainer svg {
+.socialsContainer img {
     fill: black;
-    width: 53px;
-    height: 52px;
-    aspect-ratio: 53/52;
+    width: 20px;
+    height: 40px;
 }
