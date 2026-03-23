@@ -60,3 +60,13 @@
   gap: 10px;
   z-index: 1;
 }
+
+@media (max-width: 768px) {
+  .mainEvent .logo {
+    width: 200px;
+    height: 200px;
+  }
+  .eventsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -142,3 +142,38 @@ textarea {
   justify-content: center;
   gap: 10px;
 }
+
+@media (max-width: 600px) {
+  .formSection {
+    width: 90%;
+  }
+  .inputRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inputLabel {
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 4px;
+  }
+  .textInput,
+  .radioGroup {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .textareaRow {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .textareaLabel {
+    width: auto;
+    margin-left: 0;
+    padding-right: 0;
+  }
+}

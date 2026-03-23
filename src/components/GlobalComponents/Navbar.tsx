@@ -45,6 +45,7 @@ const Navbar = () => {
     const [activeItem, setActiveItem] = useState<string | null>(null)
     const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
     const [renderedMenu, setRenderedMenu] = useState<MenuItem[] | null>(null);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     const handleEnter = (label: string) => {
         if (leaveTimer.current !== null) {
@@ -65,6 +66,11 @@ const Navbar = () => {
             setRenderedMenu(activeMenu.menu);
         }
     }, [activeMenu]);
+
+    useEffect(() => {
+        document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [mobileMenuOpen]);
 
     const isOpen = !!activeMenu?.menu;
 
@@ -88,6 +94,16 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
+                    <button
+                        className={`navbar-hamburger ${mobileMenuOpen ? 'open' : ''}`}
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        aria-label="Abrir menú"
+                        aria-expanded={mobileMenuOpen}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </nav>
 
                 { }
@@ -110,6 +126,13 @@ const Navbar = () => {
                     </div>
                 </div>
             </header>
+            <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+                <Link to="/" onClick={() => setMobileMenuOpen(false)}>Inicio</Link>
+                <div className="mobile-menu-section">Eventos</div>
+                <Link to="/evento/foundations-model" onClick={() => setMobileMenuOpen(false)}>Foundations Model</Link>
+                <Link to="/evento/vision-pro" onClick={() => setMobileMenuOpen(false)}>Vision Pro</Link>
+                <Link to="/community" onClick={() => setMobileMenuOpen(false)}>Comunidad</Link>
+            </div>
         </>
     );
 };
