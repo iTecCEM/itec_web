@@ -142,12 +142,6 @@ function EventInfo() {
               </div>
             </div>
 
-            <div className="eventMetaItem">
-              <span className="eventMetaIcon">🌐</span>
-              <div>
-                <p className="eventMetaLabel">{evento.idioma}</p>
-              </div>
-            </div>
           </aside>
         </div>
       </div>
