@@ -16,7 +16,7 @@ const History = () => {
     return () => {
       window.clearInterval(timerId);
     };
-  }, []);
+  }, [activeIndex]);
 
   const goToPrevious = () => {
     setActiveIndex((currentIndex) =>
