@@ -1,45 +1,17 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import './Register.css';
 import { supabase } from '../lib/supabaseClient';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BlueButton from '../components/GlobalComponents/BlueButton';
 import WhiteButton from '../components/GlobalComponents/WhiteButton';
 import Navbar from '../components/GlobalComponents/Navbar';
 
-
 interface EventData {
-    titulo: string;
-    horario_1: string;
-    horario_2: string;
-    deadline: string;
+    id: string;
+    name: string;
+    schedules: string[];
+    dead_line: string;
 }
-
-const eventData: Record<string, EventData> = {
-    'foundations-model': {
-        titulo: 'Foundations Model',
-        horario_1: '11:00 - 13:00',
-        horario_2: '15:00 - 16:00',
-        deadline: '12 de Abril',
-    },
-    'vision-pro': {
-        titulo: 'Vision Pro Experience',
-        horario_1: '11:00 - 13:00',
-        horario_2: '15:00 - 16:00',
-        deadline: '19 de Abril',
-    },
-    'vision-pro-2': {
-        titulo: 'Vision Pro - Sesión 2',
-        horario_1: '11:00 - 13:00',
-        horario_2: '15:00 - 16:00',
-        deadline: '26 de Abril',
-    },
-    'foundations-model-2': {
-        titulo: 'Foundations Model - Sesión 2',
-        horario_1: '11:00 - 13:00',
-        horario_2: '15:00 - 16:00',
-        deadline: '3 de Mayo',
-    },
-};
 
 interface RegistrationForm {
     firstName: string,
@@ -52,8 +24,26 @@ interface RegistrationForm {
 
 export default function Registro() {
     const { id } = useParams<{ id: string }>();
-    const evento = id ? eventData[id] : null;
     const navigate = useNavigate();
+    const [evento, setEvento] = useState<EventData | null>(null);
+
+    useEffect(() => {
+        async function fetchEvent() {
+            if (!id) return;
+            const { data, error } = await supabase
+                .from('events')
+                .select('id, name, schedules, dead_line')
+                .eq('id', id)
+                .single();
+
+            if (error) {
+                console.error('Error fetching event:', error);
+            } else {
+                setEvento(data);
+            }
+        }
+        fetchEvent();
+    }, [id]);
 
 
     const [form, setForm] = useState<RegistrationForm>({
@@ -89,7 +79,7 @@ export default function Registro() {
                 student_id: form.studentId,
                 selected_schedule: form.selectedSchedule,
                 extra_info: form.extraInfo,
-                event_id: '2a855b46-4c46-4868-802e-c14aeedf8b74'
+                event_id: id
             })
         if (error) {
             setError(error.message.includes('full capacity')
@@ -106,7 +96,7 @@ export default function Registro() {
         return (
             <div className='registerContainer'>
                 <h1>¡Registro exitoso!</h1>
-                <p>Te esperamos en el {evento?.titulo ?? 'Workshop'}.</p>
+                <p>Te esperamos en el {evento?.name ?? 'Workshop'}.</p>
                 <BlueButton text='Volver al inicio' onClick={() => navigate('/')} />
             </div>
         );
@@ -115,10 +105,10 @@ export default function Registro() {
     return (
         <div className='registerContainer'>
             <Navbar></Navbar>
-            <h1>{evento ? evento.titulo : 'Workshop'} Registro</h1>
+            <h1>{evento ? evento.name : 'Workshop'} Registro</h1>
             <p>
                 {evento
-                    ? `Regístrate antes del ${evento.deadline}`
+                    ? `Regístrate antes del ${new Date(evento.dead_line).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}`
                     : 'Regístrate con tu información'}
             </p>
             <hr />
@@ -181,27 +171,19 @@ export default function Registro() {
                 <div className="inputRow horarioRow">
                     <label className="inputLabel">Horario</label>
                     <div className="radioGroup">
-                        <label className="radioOption">
-                            <input
-                                type="radio"
-                                name="selectedSchedule"
-                                value={evento?.horario_1 ?? '11:00 - 13:00'}
-                                required
-                                checked={form.selectedSchedule === (evento?.horario_1 ?? '11:00 - 13:00')}
-                                onChange={handleChange}
-                            />
-                            {evento?.horario_1 ?? '11:00 - 13:00'}
-                        </label>
-                        <label className="radioOption">
-                            <input
-                                type="radio"
-                                name="selectedSchedule"
-                                value={evento?.horario_2 ?? '15:00 - 16:00'}
-                                checked={form.selectedSchedule === (evento?.horario_2 ?? '15:00 - 16:00')}
-                                onChange={handleChange}
-                            />
-                            {evento?.horario_2 ?? '15:00 - 16:00'}
-                        </label>
+                        {evento?.schedules?.map((schedule, i) => (
+                            <label key={i} className="radioOption">
+                                <input
+                                    type="radio"
+                                    name="selectedSchedule"
+                                    value={schedule}
+                                    required
+                                    checked={form.selectedSchedule === schedule}
+                                    onChange={handleChange}
+                                />
+                                {schedule}
+                            </label>
+                        ))}
                     </div>
                 </div>
 
