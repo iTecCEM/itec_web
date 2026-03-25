@@ -17,7 +17,7 @@ const ProjectReel = () => {
     {id : 1,
      img : img1,
      title : 'Workshops',
-     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple fj rjkvr v jr jv rj vrjrjr iv r jndknvkd v'
+     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple'
     },
     {id : 2,
      img : img2,
@@ -47,7 +47,6 @@ const ProjectReel = () => {
   return (
     <section className="pReelSection"> 
       <h1>Trayectoria</h1>
-      <div className="historyCarouselWindow">
         <div className="track" style={{ transform: `translateX(calc(-${activeIndex * 87}% + 7.5%))` }}>
           {pastEvents.map((item, index) => (
             <figure key={item.id} className={`slide ${index === activeIndex ? 'active' : ''}`}>
@@ -59,7 +58,7 @@ const ProjectReel = () => {
             </figure>
           ))}
         </div>
-      </div>
+
 
   <nav className="carouselPagination" aria-label="Carousel navigation">
     {pastEvents.map((_, index) => (
