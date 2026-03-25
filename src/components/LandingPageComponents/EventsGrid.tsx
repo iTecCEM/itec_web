@@ -1,22 +1,51 @@
+import { useEffect, useState } from 'react';
+import { supabase } from '../../lib/supabaseClient';
+import Card from './EventsGridCard.tsx';
+import './LandingPageStyle.css';
 
-import Card from './EventsGridCard.tsx'
-import widget1Imagen from '../../assets/foundationsmodel.png'
-import widget2Imagen from '../../assets/vision.png'
+interface Event {
+  id: string;
+  name: string;
+  short_description: string;
+  img_url: string;
+  color: string;
+}
 
-import './LandingPageStyle.css'
+function EventsGrid() {
+  const [events, setEvents] = useState<Event[]>([]);
 
-function EventsGrid(){
+  useEffect(() => {
+    async function fetchEvents() {
+      const { data, error } = await supabase
+        .from('events')
+        .select('id, name, short_description, img_url, color');
 
+      if (error) {
+        console.error('Error fetching events:', error);
+        return;
+      }
 
+      if (data) setEvents(data);
+    }
 
-    return(
-        <div className="eventsGrid">
-            <Card id='foundations-model' titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
-            <Card id='vision-pro' titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
-            <Card id='vision-pro-2' titulo='Vision Pro' descripcion='Explora VR y Spatial Computing con iTec' bgColor='black' color='white' imagen={widget2Imagen}></Card>
-            <Card id='foundations-model-2' titulo='Foundations Model' descripcion='Crea tu propio chatbot con AI. Corriendo solo con tu iPhone' bgColor='#d6d6d6' color='black' imagen={widget1Imagen}></Card>
-        </div>
-    )
+    fetchEvents();
+  }, []);
+
+  return (
+    <div className="eventsGrid">
+      {events.map((evento) => (
+        <Card
+          key={evento.id}
+          id={evento.id}
+          titulo={evento.name}
+          descripcion={evento.short_description}
+          bgColor={evento.color}
+          color={evento.color === '#d6d6d6' ? 'black' : 'white'}
+          imagen={evento.img_url}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default EventsGrid;
