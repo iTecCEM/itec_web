@@ -89,7 +89,7 @@ export default function Registro() {
                 student_id: form.studentId,
                 selected_schedule: form.selectedSchedule,
                 extra_info: form.extraInfo,
-                event_id: '0e606c9b-a126-4ed3-87d3-02365a2b6788'
+                event_id: '2a855b46-4c46-4868-802e-c14aeedf8b74'
             })
         if (error) {
             setError(error.message.includes('full capacity')
