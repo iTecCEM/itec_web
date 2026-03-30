@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,6 +24,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: #000000;
   background-color: #F4F4F7;
+  overflow-x: hidden;
 }
 
 .title {
