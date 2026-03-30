@@ -30,10 +30,17 @@
     gap: 26px;
 }
 
-.socialsContainer > a > img {
-    width: 30px;
-    height: 30px;
+.socialsContainer p {
+    color: black;
+    text-decoration: none;
+    font-family: "Inter", serif;
+    font-size: 11px;
 }
+
+.socialsContainer a {
+  text-decoration: none;
+}
+
 
 @media (max-width: 480px) {
   .footerContainer {

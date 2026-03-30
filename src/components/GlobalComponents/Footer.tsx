@@ -1,6 +1,6 @@
 import "./Footer.css";
-import instagramSVG from '../../assets/Instagram.svg';
-import emailSVG from '../../assets/email.svg';
+// import { CiInstagram } from "react-icons/ci";
+// import { CiMail } from "react-icons/ci";
 
 function Footer(){
     return (
@@ -9,8 +9,8 @@ function Footer(){
             <footer className="footerContainer">
                 <p>Copyright © 2026  iTec. Todos los derechos reservados</p>
                 <div className="socialsContainer">
-                    <a href={"https://www.instagram.com/itec.cem/"} target="_blank"><img src={instagramSVG} alt="Instagram"></img></a>
-                    <a href={"mailto:iteccem25@gmail.com"} target="_blank"><img src={emailSVG} alt="Correo iTec"></img></a>
+                    <a href={"https://www.instagram.com/itec.cem/"}><p>Instagram</p></a>
+                    <a href={"mailto:iteccem25@gmail.com"}><p>Contactanos</p></a>
                 </div>
             </footer>
         </>
