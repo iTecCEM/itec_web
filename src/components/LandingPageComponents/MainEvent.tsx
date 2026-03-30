@@ -14,7 +14,6 @@ function main_event(){
 
                 <div className='buttonContainer'>
                     <BlueButton text='Aprende más'></BlueButton>
-                    {/* <WhiteButton text='Contactanos'></WhiteButton> */}
                 </div>
             </div>
         </>
