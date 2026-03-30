@@ -9,7 +9,7 @@ function main_event(){
                 <img src={logo_itec_week} alt="iTec Logo" className='logo' />
                 <h1 className="title">iTec Week</h1>
                 <h2>4-8 de abril, 2026</h2>
-                <p className="description">Únete a iTec Week y construye con nosotros: innovación, <br/>comunidad y talleres para desarrollar con Swift en el Tec CEM.</p>
+                <p className="description">Únete a iTec Week y construye con nosotros: innovación, comunidad y talleres para desarrollar con Swift en el Tec CEM.</p>
 
                 <div className='buttonContainer'>
                     <BlueButton text='Aprende más'></BlueButton>

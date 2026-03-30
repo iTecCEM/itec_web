@@ -41,6 +41,7 @@ body {
   color: #888;
   margin: 0;
   text-align: center;
+  max-width: 90%;
 }
 
 .descriptionWidget {
