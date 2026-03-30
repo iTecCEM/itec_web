@@ -156,6 +156,170 @@
 	text-align: center;
 }
 
+.memojiCanvas {
+	position: absolute;
+	inset: 0;;
+}
+
+.bubble {
+	position:absolute;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bubble img {
+	width: 84%;
+	height: 84%;
+	object-fit: contain;
+	pointer-events: none;
+	user-select: none;
+}
+
+.bubbleLarge {
+	width: 220px;
+	height: 220px;
+}
+
+.bubbleMedium {
+	width: 170px;
+	height: 170px;
+}
+
+.bubbleDot {
+	width: 60px;
+	height: 60px;
+}
+
+/* memojis bubbles */
+.bubbleOrange {
+	background: #EF8D5F;
+}
+
+.bubblePink {
+	background: #D29793;
+}
+
+.bubbleBlue {
+	background: #60B5E7;
+}
+
+/* big dots (100 x 100) colors */
+.bubbleReddishPink {
+	background: #F64F59; /*dot 1*/
+}
+
+.bubbleSkyBlue {
+	background: #10CBFC; /*dot 2*/
+}
+
+.bubbleDarkBlue {
+	background: #0172EB; /*dot 3*/
+}	
+
+.bubbleOrange2{
+	background: #FE8E0A; /*dot 4*/
+}
+
+.bubbleYellow {
+	background: #FEE062; /*dot 5*/
+}
+
+.bubbleIntenseGreen {
+	background: #01DD00; /*dot 6*/
+}
+
+.bubblePurplePink {
+	background: #F378E3; /*dot 7*/
+}
+
+.bubbleLiliac {
+	background: #B9A5C6; /*dot 8*/
+}
+
+/*medium dots 72x68*/
+.bubbleRed2 {
+	background: #FF013D; /*dot 2-1*/
+}
+
+.bubblePaleGreen {
+	background: #ACC4A9; /*dot 2-2*/
+}
+
+/* small dots 41x38 */
+.bubbleAmber {
+	background: #F6B664; /*dot 3-1 y 3-3*/
+}
+
+.bubblePalePink {
+	background: #CF96AE; /*dot 3-2*/
+}
+
+.bubbleMintGreen {
+	background: #01DD00; /*dot 3-4 y 3-5*/
+}
+
+/*bubble positions*/
+.bubble1 {
+	top: 180px;
+	left: 28%;
+}
+
+.bubble2 {
+	top: 120px;
+	left: 56%;
+}
+
+.bubble3 {
+	top: 430px;
+	left: 46%;
+}
+
+.dot1 {
+	top: 170px;
+	left: 22%;
+}
+
+.dot2 {
+	top: 360px;
+	left: 27%;
+}
+
+.dot3 {
+	top: 560px;
+	left: 70%;
+}
+
+@media (max-width: 900px) {
+	.memojiRectangle {
+		height: 620px;
+	}
+
+	.memojiRectangle h1 {
+		font-size: 42px;
+		top: 24px;
+	}
+
+	.bubbleLarge {
+		width: 160px;
+		height: 160px;
+	}
+
+	.bubbleMedium {
+		width: 130px;
+		height: 130px;
+	}
+
+	.bubbleDot {
+		width: 42px;
+		height: 42px;
+	}
+}
+
+
 @media (max-width: 600px) {
   .historyText h1 {
     font-size: 32px;

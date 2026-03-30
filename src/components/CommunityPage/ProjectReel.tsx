@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import img1 from "../../assets/historyimg1.jpg";
 import img2 from "../../assets/historyimg2.jpg";
