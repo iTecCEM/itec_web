@@ -54,6 +54,7 @@
   color: black;
   margin-bottom: 16px;
   text-align: left;
+  white-space: pre-line;
 }
 
 .eventDeadline {
