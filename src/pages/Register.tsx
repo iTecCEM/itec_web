@@ -3,7 +3,6 @@ import './Register.css';
 import { supabase } from '../lib/supabaseClient';
 import { useState, useEffect } from 'react';
 import BlueButton from '../components/GlobalComponents/BlueButton';
-import WhiteButton from '../components/GlobalComponents/WhiteButton';
 import Navbar from '../components/GlobalComponents/Navbar';
 
 interface EventData {
