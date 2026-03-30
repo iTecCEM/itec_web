@@ -99,7 +99,7 @@ function EventInfo() {
                   <IoCalendarOutline /> {new Date(evento.date).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}
                 </p>
                 <p className="eventDateSub">
-                  {evento.schedules?.join(' / ')}
+                  {evento.schedules?.join(' & ')}
                 </p>
               </div>
             </div>
