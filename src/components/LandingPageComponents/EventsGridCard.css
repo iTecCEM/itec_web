@@ -25,6 +25,10 @@
     object-fit: contain;
 }
 
+.contentContainer p{
+    max-width: 90%;
+}
+
 .contentContainer .buttonContainer{
     display: flex;
     flex-direction: row;
