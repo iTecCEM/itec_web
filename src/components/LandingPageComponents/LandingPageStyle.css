@@ -14,6 +14,10 @@
   height: 150px;
 }
 
+.firstLanding p {
+  max-width: 70%;
+}
+
 .mainEvent {
   display: flex;
   flex-direction: column;
@@ -31,10 +35,6 @@
 
 .mainEvent p {
   max-width: 90%;
-}
-
-.description {
-  max-width: 700px; /* adjust to taste */
 }
 
 .mainEvent .logo {
@@ -78,6 +78,10 @@
   .mainEvent .logo {
     width: 200px;
     height: 200px;
+  }
+
+  .firstLanding p {
+    max-width: 90%;
   }
   .eventsGrid {
     grid-template-columns: 1fr;
