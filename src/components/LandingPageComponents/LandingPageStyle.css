@@ -29,6 +29,10 @@
 
 }
 
+.mainEvent p {
+  max-width: 90%;
+}
+
 .description {
   max-width: 700px; /* adjust to taste */
 }
