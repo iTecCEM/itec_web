@@ -155,7 +155,7 @@ export default function Registro() {
                 </div>
 
                 <div className="inputRow">
-                    <label className="inputLabel">Matricula</label>
+                    <label className="inputLabel">Matrícula</label>
                     <input
                         type="text"
                         name="studentId"
@@ -188,7 +188,7 @@ export default function Registro() {
 
                 <div className="textareaRow">
                     <label className="textareaLabel">
-                        Queremos saber si has tenido alguna experiencia previa con lo que se impartira en el Workshop. Si tienes alguna compartela
+                        Queremos saber si has tenido alguna experiencia previa con lo que se impartirá en el workshop. Si tienes alguna, compártela.
                     </label>
                     <textarea
                         name="extraInfo"

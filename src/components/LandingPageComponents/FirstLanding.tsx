@@ -9,8 +9,8 @@ function FirstLanding(){
             <div className='firstLanding'>
                 <img src={logo} alt="iTec Logo" className='logo' />
                 <h1 className="title">iTec</h1>
-                <p className="description">Student community based on Tecnologico de Monterrey CEM focused on <br/>
-                Apple's latest Software and Hardware innovations.<br/>Driven by innovation and creativity, pushing the boundries of the technology </p>
+                <p className="description">Comunidad estudiantil del Tecnológico de Monterrey CEM enfocada <br/>en las últimas innovaciones de software y hardware de Apple.<br/>Impulsada por la innovación y la creatividad, llevando los límites de la tecnología más allá.
+</p>
 
                 <div className='buttonContainer'>
                     <BlueButton text='Aprende más'></BlueButton>

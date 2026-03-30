@@ -21,7 +21,12 @@
   align-items: center;
   width: 100%;
   padding: 60px 0 40px;
-  gap: 12px;
+  gap: 5px;
+}
+
+.mainEvent h2{
+  font-weight: 500;
+
 }
 
 .mainEvent .logo {
