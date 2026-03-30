@@ -6,6 +6,7 @@ import './LandingPageStyle.css';
 interface Event {
   id: string;
   name: string;
+  date: string;
   short_description: string;
   img_url: string;
   color: string;
@@ -18,7 +19,7 @@ function EventsGrid() {
     async function fetchEvents() {
       const { data, error } = await supabase
         .from('events')
-        .select('id, name, short_description, img_url, color');
+        .select('id, name, date, short_description, img_url, color');
 
       if (error) {
         console.error('Error fetching events:', error);
@@ -38,6 +39,7 @@ function EventsGrid() {
           key={evento.id}
           id={evento.id}
           titulo={evento.name}
+          fecha={evento.date}
           descripcion={evento.short_description}
           bgColor={evento.color}
           color={evento.color === '#d6d6d6' ? 'black' : 'white'}
