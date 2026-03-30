@@ -1,6 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
+
+// Icons:
+import { IoCalendarOutline } from "react-icons/io5";
+import { FaMapPin } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
+
 import './EventInfo.css';
 
 import NavBar from '../components/GlobalComponents/Navbar.tsx'
@@ -83,15 +89,14 @@ function EventInfo() {
               Regístrate antes del {new Date(evento.dead_line).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}
             </p>
 
-            <button className="eventRequestBtn" onClick={() => navigate(`/registro/${id}`)}>
+            <button className="eventRequestBtn eventRequestBtn--desktop" onClick={() => navigate(`/registro/${id}`)}>
               Registrate
             </button>
 
             <div className="eventDateBlock">
-              <span className="eventDateIcon">📅</span>
               <div>
                 <p className="eventDateMain">
-                  {new Date(evento.date).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  <IoCalendarOutline /> {new Date(evento.date).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}
                 </p>
                 <p className="eventDateSub">
                   {evento.schedules?.join(' / ')}
@@ -102,19 +107,23 @@ function EventInfo() {
 
           <aside className="eventSidebar">
             <div className="eventMetaItem">
-              <span className="eventMetaIcon">📍</span>
-              <div>
-                <p className="eventMetaLabel">Presencial</p>
-              </div>
+             
+                <FaUsers />
+                <p className="eventMetaLabel">Sesión presencial</p>
+             
             </div>
 
             <div className="eventMetaItem">
-              <span className="eventMetaIcon">🏛️</span>
+              <FaMapPin />
               <div>
                 <p className="eventMetaLabel">{evento.location}</p>
               </div>
             </div>
           </aside>
+
+          <button className="eventRequestBtn eventRequestBtn--mobile" onClick={() => navigate(`/registro/${id}`)}>
+            Registrate
+          </button>
         </div>
       </div>
       <Footer />

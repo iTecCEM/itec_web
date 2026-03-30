@@ -12,7 +12,7 @@
   max-width: 980px;
   background-color: white;
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, .3);
   padding: 48px 56px;
   margin-top: 100px;
 }
@@ -40,8 +40,8 @@
 }
 
 .eventTitulo {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: black;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
@@ -49,7 +49,7 @@
 }
 
 .eventBody {
-  font-size: 0.975rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   color: black;
   margin-bottom: 16px;
@@ -67,7 +67,7 @@
 .eventRequestBtn {
   display: inline-block;
   padding: 10px 32px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #2997ff;
   background: transparent;
@@ -77,6 +77,10 @@
   transition: background-color 0.2s, color 0.2s;
 }
 
+.eventRequestBtn--mobile {
+  display: none;
+}
+
 .eventRequestBtn:hover {
   background-color: #2997ff;
   color: #fff;
@@ -84,28 +88,31 @@
 
 .eventDateBlock {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   margin-top: 36px;
   padding-top: 28px;
   border-top: 1px solid black;
 }
-
 .eventDateIcon {
   font-size: 1.2rem;
+  line-height: 1.4;
 }
-
 .eventDateMain {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.9rem;
   color: black;
   margin: 0;
 }
 
+.eventDateMain svg {
+  vertical-align: -2px;
+}
+
 .eventDateSub {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #a1a1a6;
   margin: 2px 0 0;
+  text-align: left;
 }
 
 /* Sidebar */
@@ -131,7 +138,7 @@
 
 .eventMetaItem {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 
@@ -145,36 +152,66 @@
   font-size: 0.9rem;
   color: black;
   margin: 0;
-  font-weight: 500;
 }
 
 .eventMetaSub {
-  font-size: 0.8rem;
-  color: bla;
+  font-size: 0.9rem;
+  color: black;
   margin: 2px 0 0;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .eventPage {
     padding: 0 16px 60px;
   }
+  
+  .eventLayout {
+    display: flex;
+    gap: 20px;
+  }
 
   .eventCard {
+    width: auto;
     padding: 32px 24px;
-    margin-top: 60px;
+    margin: 90px 16px 0;
   }
 
   .eventLayout {
     flex-direction: column;
   }
 
+  .eventMain {
+    order: 1;
+  }
+
   .eventSidebar {
+    order: 2;
     width: 100%;
     padding-left: 0;
-    padding-top: 28px;
     border-left: none;
-    border-top: 1px solid #2a2a2c;
+    border-top: 0px solid #d2d2d7;
     position: relative;
+  }
+  .eventDateBlock{
+    padding: 0px;
+  }
+
+  .eventSidebar::before {
+    display: none;
+  }
+
+  .eventDateBlock {
+    border-top: none;
+  }
+
+  .eventRequestBtn--desktop {
+    display: none;
+  }
+
+  .eventRequestBtn--mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 24px;
+    order: 3;
   }
 }

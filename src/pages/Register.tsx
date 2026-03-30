@@ -204,7 +204,7 @@ export default function Registro() {
                     <button type="submit" className="BlueButton" disabled={loading}>
                         {loading ? 'Enviando...' : 'Enviar'}
                     </button>
-                    <WhiteButton text='Volver'/>
+                    {/* <WhiteButton text='Volver'/> */}
                 </div>
             </form>
         </div>
