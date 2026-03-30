@@ -29,6 +29,10 @@
 
 }
 
+.description {
+  max-width: 700px; /* adjust to taste */
+}
+
 .mainEvent .logo {
   width: 400px;
   height: 400px;
