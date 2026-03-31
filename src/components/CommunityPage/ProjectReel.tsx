@@ -9,50 +9,59 @@ const ProjectReel = () => {
     id : number,
     img : string,
     title : string,
-    desc : string
+    desc : string,
+    details : string
   };
 
   const pastEvents : Event [] = [
     {id : 1,
      img : img1,
      title : 'Workshops',
-     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple'
+     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple',
+     details : `Se han llevado a cabo talleres con las tecnologías de Apple: SwiftUI, CoreML, Playgrounds y el desarrollo de Spatial Computing con los Apple Vision Pro, teniendo en cuenta la ideología del grupo de hacer a Swift más accesible para los alumnos, utilizando para ello laboratorios con iMac's`
     },
     {id : 2,
      img : img2,
      title : 'Workshops',
-     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple'
+     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple',
+     details : `Se han llevado a cabo talleres con las tecnologías de Apple: SwiftUI, CoreML, Playgrounds y el desarrollo de Spatial Computing con los Apple Vision Pro, teniendo en cuenta la ideología del grupo de hacer a Swift más accesible para los alumnos, utilizando para ello laboratorios con iMac's`
+
     },
     {id : 3,
      img : img3,
      title : 'Workshops',
-     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple'
+     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple',
+     details : `Se han llevado a cabo talleres con las tecnologías de Apple: SwiftUI, CoreML, Playgrounds y el desarrollo de Spatial Computing con los Apple Vision Pro, teniendo en cuenta la ideología del grupo de hacer a Swift más accesible para los alumnos, utilizando para ello laboratorios con iMac's`
     },
     {id : 4,
      img : img3,
      title : 'Workshops',
-     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple'
+     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple',
+     details : `Se han llevado a cabo talleres con las tecnologías de Apple: SwiftUI, CoreML, Playgrounds y el desarrollo de Spatial Computing con los Apple Vision Pro, teniendo en cuenta la ideología del grupo de hacer a Swift más accesible para los alumnos, utilizando para ello laboratorios con iMac's`
     },
     {id : 5,
      img : img3,
      title : 'Workshops',
-     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple'
+     desc : 'Talleres para enseñar tecnologías para el desarrollo de software de Apple',
+     details : `Se han llevado a cabo talleres con las tecnologías de Apple: SwiftUI, CoreML, Playgrounds y el desarrollo de Spatial Computing con los Apple Vision Pro, teniendo en cuenta la ideología del grupo de hacer a Swift más accesible para los alumnos, utilizando para ello laboratorios con iMac's`
     }
   ];
   
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const isMobile = window.innerWidth <= 768 ;
+  const offset = isMobile ? 95 : 80; 
 
   return (
     <section className="pReelSection"> 
       <h1>Trayectoria</h1>
-        <div className="track" style={{ transform: `translateX(calc(-${activeIndex * 87}% + 7.5%))` }}>
+        <div className="track" style={{ transform: `translateX(calc(-${activeIndex * offset}% + ${isMobile ? 2.5 : 10}%))` }}>
           {pastEvents.map((item, index) => (
             <figure key={item.id} className={`slide ${index === activeIndex ? 'active' : ''}`}>
               <img src={item.img} alt={item.title} />
               <figcaption className="overlay">
                 <h2>{item.title}</h2>
-                <p>{item.desc}</p>
+                <p className="desc">{item.desc}</p>
+                <p className="details">{item.details}</p>
               </figcaption>
             </figure>
           ))}
